@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "gulp"
+    "build": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Gu Yuteng <igyteng@gmail.com>",
   "license": "GPL",
@@ -52,7 +54,8 @@
     "request": "^2.75.0",
     "request-promise": "^4.1.1",
     "sqlite3": "^3.1.4",
-    "ws": "^2.0.2"
+    "ws": "^2.0.2",
+    "snyk": "^1.192.0"
   },
   "repository": {
     "type": "git",
@@ -64,5 +67,6 @@
   "homepage": "https://github.com/shadowsocks/shadowsocks-manager#readme",
   "bin": {
     "ssmgr": "./bin/ssmgr"
-  }
+  },
+  "snyk": true
 }
